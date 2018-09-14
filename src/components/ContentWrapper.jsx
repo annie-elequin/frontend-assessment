@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 const ContentWrapper = styled.div`
     display: block;
-    width: 100%;
-    height: 1000px;
-    background-image: url(${bg});
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    margin: 0 auto;
+    width: 53%;
+    min-width: 800px;
+    max-width: 1200px;
+    height: 400px;
 `;
 export default ContentWrapper;

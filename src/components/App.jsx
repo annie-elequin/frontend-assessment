@@ -9,9 +9,9 @@ export default class App extends React.Component {
     render() {
         return (
             <Container>
-                {/* <ContentWrapper>
+                <ContentWrapper>
                     <Content />
-                </ContentWrapper> */}
+                </ContentWrapper>
             </Container>
         );
     }

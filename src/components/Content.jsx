@@ -1,12 +1,27 @@
-import styled from 'styled-components';
+import React from 'react';
+import autoBind from 'react-autobind';
+import axios from 'axios';
+import Title from './Title';
+import constants from '../constants';
 
-const Content = styled.div`
-    display: block;
-    width: 100%;
-    height: 1000px;
-    background-image: url(${bg});
-    background-size: cover;
-    background-position: center;
-    position: relative;
-`;
-export default Content;
+export default class Content extends React.Component {
+    constructor() {
+        super();
+        autoBind(this);
+
+        this.state = {};
+    }
+    componentDidMount() {
+        axios.get(constants.apiRoute).then(res => {
+            console.log(res.data);
+        });
+    }
+    render() {
+        return (
+            <div>
+                <Title>SpaceX Launches</Title>
+                {/* <ContentHeader /> */}
+            </div>
+        );
+    }
+}
