@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from './Container';
-import ContentWrapper from './ContentWrapper';
+import AppContainer from './styled-components/containers/AppContainer';
+import ContentWrapper from './styled-components/ContentWrapper';
 import Content from './Content';
 
 import '../index.scss';
@@ -8,11 +8,11 @@ import '../index.scss';
 export default class App extends React.Component {
     render() {
         return (
-            <Container>
+            <AppContainer>
                 <ContentWrapper>
                     <Content />
                 </ContentWrapper>
-            </Container>
+            </AppContainer>
         );
     }
 }
