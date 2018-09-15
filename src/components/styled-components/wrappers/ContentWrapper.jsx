@@ -6,6 +6,8 @@ const ContentWrapper = styled.div`
     width: 53%;
     min-width: 800px;
     max-width: 1200px;
-    height: 400px;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
 `;
 export default ContentWrapper;

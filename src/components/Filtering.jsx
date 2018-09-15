@@ -1,21 +1,47 @@
 import React from 'react';
+import autoBind from 'react-autobind';
 import FilterWrapper from './styled-components/wrappers/FilterWrapper';
 import RefreshButton from './styled-components/RefreshButton';
+import constants from '../constants';
+import Checkbox from './styled-components/Checkbox';
+import CheckboxLabel from './styled-components/CheckboxLabel';
+import Input from './styled-components/Input';
+const {colors} = constants.styles;
 
 export default class Filtering extends React.Component {
     constructor() {
         super();
+        autoBind(this);
 
-        this.state = {};
+        this.state = {
+            landSuccess: false,
+            reused: false,
+            withReddit: false
+        };
+    }
+    handleChange(e, name) {
+        this.setState({[name]: !this.state[name]});
     }
     render() {
+        const {landSuccess, reused, withReddit} = this.state;
         const iconSize = '20';
         return (
             <FilterWrapper>
                 <RefreshButton>
-                    <RefreshIcon width={iconSize} height={iconSize} fill={'#fff'} />
+                    <RefreshIcon width={iconSize} height={iconSize} fill={colors.white} />
                 </RefreshButton>
-                {/* <FilterCheckboxes /> */}
+                <Checkbox onClick={e => this.handleChange(e, 'withReddit')} checked={withReddit}>
+                    <input type="checkbox" defaultChecked={withReddit} />
+                    <span /><label>With Reddit</label>
+                </Checkbox>
+                <Checkbox onClick={e => this.handleChange(e, 'reused')} checked={reused}>
+                    <input type="checkbox" defaultChecked={reused} />
+                    <span /><label>Reused</label>
+                </Checkbox>
+                <Checkbox onClick={e => this.handleChange(e, 'landSuccess')} checked={landSuccess}>
+                    <input type="checkbox" defaultChecked={landSuccess} />
+                    <span /><label>Land Success</label>
+                </Checkbox>
             </FilterWrapper>
         );
     }

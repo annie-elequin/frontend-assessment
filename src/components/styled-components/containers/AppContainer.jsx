@@ -10,6 +10,6 @@ const AppContainer = styled.div`
     background-image: url(${bg});
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: fixed;
 `;
 export default AppContainer;

@@ -1,16 +1,18 @@
 import React from 'react';
+import ContentRowWrapper from './styled-components/wrappers/ContentRowWrapper';
 
 export default class ContentRow extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {};
     }
     render() {
+        const {info} = this.props;
         return (
-            <React.Fragment>
-                hi
-            </React.Fragment>
+            <ContentRowWrapper>
+                Rocket Name - {info.rocket.rocket_name}
+            </ContentRowWrapper>
         );
     }
 }
