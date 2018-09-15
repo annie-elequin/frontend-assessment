@@ -8,8 +8,11 @@ const ContentRowWrapper = styled.div`
     height: 60px;
     margin: 10px 0;
     box-sizing: border-box;
-    background-color: ${fadedWhite};
+    background-color: rgba(255, 255, 255, .7);
     border-radius: ${styles.borderRadius};
     border: ${styles.border};
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 `;
 export default ContentRowWrapper;

@@ -10,6 +10,7 @@ const HeaderContainer = styled.div`
     border-top-left-radius: ${borderRadius};
     border-top-right-radius: ${borderRadius};
     border: ${border};
+    border-bottom: none;
     box-sizing: border-box;
     position: relative;
 `;

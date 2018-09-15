@@ -14,8 +14,8 @@ export default class Sorting extends React.Component {
                 <Label>Badge</Label>
                 <Label>Rocket Name</Label>
                 <Label>Rocket Type</Label>
-                <Label>Launch Date</Label>
-                <Label grow>Details</Label>
+                <Label active>Launch Date</Label>
+                <Label grow align="left">Details</Label>
                 <Label>ID</Label>
                 <Label>Article</Label>
             </SortingWrapper>

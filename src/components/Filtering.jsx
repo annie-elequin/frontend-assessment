@@ -4,8 +4,6 @@ import FilterWrapper from './styled-components/wrappers/FilterWrapper';
 import RefreshButton from './styled-components/RefreshButton';
 import constants from '../constants';
 import Checkbox from './styled-components/Checkbox';
-import CheckboxLabel from './styled-components/CheckboxLabel';
-import Input from './styled-components/Input';
 const {colors} = constants.styles;
 
 export default class Filtering extends React.Component {

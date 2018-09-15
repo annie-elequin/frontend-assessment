@@ -8,7 +8,8 @@ const constants = {
             white: '#fff',
             lightGray: '#D9DADD',
             lightBlue: '#A3BCD0',
-            darkBlue: '#0C547F'
+            darkBlue: '#0C547F',
+            teal: '#27D9D0'
         }
     }
 }
