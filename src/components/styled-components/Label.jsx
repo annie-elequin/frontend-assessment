@@ -3,25 +3,28 @@ import constants from '../../constants';
 const {colors} = constants.styles;
 
 const Label = styled.div`
-    font-size: 1em;
+    font-size: .9em;
     line-height: 35px;
+    padding-left: 10px;
     color: ${colors.darkBlue};
     flex-grow: 1;   
+    flex-basis: 10%;
+    align-item: center;
     border-top: 5px solid transparent; 
 
-    ${props => props.grow && css`
+    ${props => props.sm && css`
+        flex-basis: 3%;
+    `}
+    ${props => props.md && css`
+        flex-basis: 5%;
+    `}
+    ${props => props.lg && css`
         flex-basis: 35%;
     `}
     ${props => props.active ? css`
         border-bottom: 5px solid ${colors.teal};
     `: css`
         border-bottom: 5px solid transparent;
-    `}
-    ${props => props.align ? css`
-        text-align: ${props.align};
-        padding-left: 18px;
-    `: css`
-        text-align: center;
     `}
 `;
 export default Label;

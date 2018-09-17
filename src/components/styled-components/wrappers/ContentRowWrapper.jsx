@@ -7,12 +7,14 @@ const ContentRowWrapper = styled.div`
     width: 100%;
     height: 60px;
     margin: 10px 0;
+    padding: 10px;
+    // padding-left: 0px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, .7);
     border-radius: ${styles.borderRadius};
     border: ${styles.border};
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 `;
 export default ContentRowWrapper;

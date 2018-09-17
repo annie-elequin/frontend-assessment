@@ -11,13 +11,13 @@ export default class Sorting extends React.Component {
     render() {
         return (
             <SortingWrapper>
-                <Label>Badge</Label>
+                <Label md>Badge</Label>
                 <Label>Rocket Name</Label>
                 <Label>Rocket Type</Label>
                 <Label active>Launch Date</Label>
-                <Label grow align="left">Details</Label>
-                <Label>ID</Label>
-                <Label>Article</Label>
+                <Label lg align="left">Details</Label>
+                <Label sm>ID</Label>
+                <Label sm>Article</Label>
             </SortingWrapper>
         );
     }

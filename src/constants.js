@@ -7,7 +7,9 @@ const constants = {
             fadedWhite: 'rgba(255, 255, 255, 0.2)',
             white: '#fff',
             lightGray: '#D9DADD',
+            darkGray: '#5C5C5C',
             lightBlue: '#A3BCD0',
+            twitterBlue: '#15A2E8',
             darkBlue: '#0C547F',
             teal: '#27D9D0'
         }
