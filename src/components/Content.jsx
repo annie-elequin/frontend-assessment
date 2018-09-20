@@ -27,7 +27,6 @@ export default class Content extends React.Component {
     fetchData() {
         this.setState({isFetching: true});
         axios.get(constants.apiRoute).then(res => {
-            console.log(res.data);
             this.setState({data: res.data, filteredData: res.data, isFetching: false})
         });
     }
@@ -46,7 +45,6 @@ export default class Content extends React.Component {
             if (filters.withReddit && !this.hasReddit(row.links)) { valid = false; }
             return valid;
         });
-        console.log(filteredData);
         this.setState({filteredData: filteredData, isFetching: false});
     }
     isReused(reuse) {

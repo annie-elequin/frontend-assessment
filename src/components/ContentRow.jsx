@@ -20,7 +20,11 @@ const ContentRow = props => {
             <RowItem>{formatDate(date)}</RowItem>
             <RowItem size="lg">{info.details || 'No Details'}</RowItem>
             <RowItem size="sm">{info.flight_number}</RowItem>
-            <RowItem size="sm"><LinkIcon fill={colors.twitterBlue} /></RowItem>
+            <RowItem size="sm">
+                <a href={info.links.article_link} target="_blank">
+                    <LinkIcon fill={colors.twitterBlue} />
+                </a>
+            </RowItem>
         </ContentRowWrapper>
     );
 }
