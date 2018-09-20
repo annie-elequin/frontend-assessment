@@ -5,6 +5,7 @@ const constants = {
         border: '1px solid rgba(255, 255, 255, 0.5)',
         colors: {
             fadedWhite: 'rgba(255, 255, 255, 0.2)',
+            fadedTeal: 'rgba(39, 217, 208, 0.5)',
             white: '#fff',
             lightGray: '#D9DADD',
             darkGray: '#5C5C5C',

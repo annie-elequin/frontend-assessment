@@ -7,8 +7,8 @@ import Checkbox from './styled-components/Checkbox';
 const {colors} = constants.styles;
 
 export default class Filtering extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         autoBind(this);
 
         this.state = {
@@ -18,14 +18,15 @@ export default class Filtering extends React.Component {
         };
     }
     handleChange(e, name) {
-        this.setState({[name]: !this.state[name]});
+        this.setState({[name]: !this.state[name]}, () => this.props.filterData(this.state));
     }
     render() {
         const {landSuccess, reused, withReddit} = this.state;
+        const {refreshData} = this.props;
         const iconSize = '20';
         return (
             <FilterWrapper>
-                <RefreshButton>
+                <RefreshButton onClick={refreshData}>
                     <RefreshIcon width={iconSize} height={iconSize} fill={colors.white} />
                 </RefreshButton>
                 <Checkbox onClick={e => this.handleChange(e, 'withReddit')} checked={withReddit}>

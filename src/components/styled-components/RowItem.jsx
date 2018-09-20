@@ -12,6 +12,11 @@ const RowItem = styled(Label)`
     overflow: hidden;
     text-overflow: ellipsis;
     display: table-cell;
+    cursor: default;
+
+    &:hover {
+        border-bottom: 5px solid transparent;
+    }
 
     img {
         max-width: 30px;

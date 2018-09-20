@@ -1,50 +1,30 @@
 import React from 'react';
 import ContentRowWrapper from './styled-components/wrappers/ContentRowWrapper';
-import Badge from './styled-components/Badge';
 
 import placeholder from '../../assets/placeholder.png';
 import RowItem from './styled-components/RowItem';
 import constants from '../constants';
+import {formatDate} from '../utils';
 const {colors} = constants.styles;
 
-export default class ContentRow extends React.Component {
-    constructor(props) {
-        super(props);
+const ContentRow = props => {
+    const {info} = props;
 
-        this.state = {};
-    }
-    formatDate(date) {
-        const year = date.getFullYear();
-        let month = date.getMonth();
-        let day = date.getDate();
-
-        if (day < 10) {
-            day = `0${day}`;
-        }
-        if (month < 10) {
-            month = `0${month}`;
-        }
-
-        return `${month}/${day}/${year}`;
-    }
-    render() {
-        const {info} = this.props;
-
-        // for a larger project, use moment.js
-        const date = new Date(info.launch_date_local);
-        return (
-            <ContentRowWrapper>
-                <RowItem md><img src={placeholder} /></RowItem>
-                <RowItem>{info.rocket.rocket_name}</RowItem>
-                <RowItem>{info.rocket.rocket_type}</RowItem>
-                <RowItem>{this.formatDate(date)}</RowItem>
-                <RowItem lg>{info.details || 'No Details'}</RowItem>
-                <RowItem sm>{info.flight_number}</RowItem>
-                <RowItem sm><LinkIcon fill={colors.twitterBlue} /></RowItem>
-            </ContentRowWrapper>
-        );
-    }
+    // for a larger project, use moment.js
+    const date = new Date(info.launch_date_local);
+    return (
+        <ContentRowWrapper>
+            <RowItem size="md"><img src={placeholder} /></RowItem>
+            <RowItem>{info.rocket.rocket_name}</RowItem>
+            <RowItem>{info.rocket.rocket_type}</RowItem>
+            <RowItem>{formatDate(date)}</RowItem>
+            <RowItem size="lg">{info.details || 'No Details'}</RowItem>
+            <RowItem size="sm">{info.flight_number}</RowItem>
+            <RowItem size="sm"><LinkIcon fill={colors.twitterBlue} /></RowItem>
+        </ContentRowWrapper>
+    );
 }
+export default ContentRow;
 
 const LinkIcon = props => {
     return (

@@ -5,14 +5,13 @@ import Content from './Content';
 
 import '../index.scss';
 
-export default class App extends React.Component {
-    render() {
-        return (
-            <AppContainer>
-                <ContentWrapper>
-                    <Content />
-                </ContentWrapper>
-            </AppContainer>
-        );
-    }
+const App = () => {
+    return (
+        <AppContainer>
+            <ContentWrapper>
+                <Content />
+            </ContentWrapper>
+        </AppContainer>
+    );
 }
+export default App;
