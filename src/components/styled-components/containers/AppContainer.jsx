@@ -6,7 +6,6 @@ const AppContainer = styled.div`
     display: block;
     width: 100%;
     height: 100vh;
-    padding-top: 25px;
     background-image: url(${bg});
     background-size: cover;
     background-position: center;
