@@ -3,7 +3,7 @@ import constants from '../../constants';
 const {colors} = constants.styles;
 
 const Label = styled.div.attrs({
-    // or we can define ynamic ones
+    // dynamic styles
     flexbasis: props => {
         switch(props.size) {
             case 'sm': return '3%';
@@ -11,6 +11,16 @@ const Label = styled.div.attrs({
             case 'lg': return '35%';
             default: return '10%';
         }
+    },
+    topborder: props => {
+        let ret = '';
+        props.ascending ? ret = `5px solid ${colors.teal}` : ret = '5px solid transparent';
+        return ret;
+    },
+    bottomborder: props => {
+        let ret = '';
+        props.ascending ? ret = '5px solid transparent' : ret = `5px solid ${colors.teal}`;
+        return ret;
     }
 })`
     font-size: .9em;
@@ -21,15 +31,11 @@ const Label = styled.div.attrs({
     align-item: center;
 
     flex-basis: ${props => props.flexbasis};
+    border-top: ${props => props.topborder};
+    border-bottom: ${props => props.bottomborder};
 
     ${props => props.active ? css`
         cursor: pointer;
-        border-top: 5px solid transparent; 
-        border-bottom: 5px solid ${colors.teal};
-        &.ascending: {
-            border-top: 5px solid ${colors.teal}; 
-            border-bottom: 5px solid transparent;
-        }
     `: css`
         border-top: 5px solid transparent; 
         border-bottom: 5px solid transparent;

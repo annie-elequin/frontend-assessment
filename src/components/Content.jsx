@@ -8,7 +8,6 @@ import ContentRow from './ContentRow';
 import Loader from './styled-components/Loader';
 
 import loaderUrl from '../../assets/loader.svg';
-import { ObjectFlags } from 'typescript';
 
 export default class Content extends React.Component {
     constructor() {

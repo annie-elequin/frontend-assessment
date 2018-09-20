@@ -8,7 +8,6 @@ const ContentRowWrapper = styled.div`
     height: 60px;
     margin: 10px 0;
     padding: 10px;
-    // padding-left: 0px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, .7);
     border-radius: ${styles.borderRadius};
